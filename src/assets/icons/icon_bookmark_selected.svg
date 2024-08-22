@@ -1,0 +1,10 @@
+<svg width='32' height='32' viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><rect width='32' height='32' stroke='none' fill='#009bd5' opacity='0'/>
+  <g transform="matrix(0.7 0 0 0.7 16 16)" >
+  <g transform="matrix(1 0 0 1 0 -0.15)" >
+  <path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: #009bd5; fill-rule: nonzero; opacity: 1;" transform=" translate(-20, -19.85)" d="M 20 31.441 L 8.5 37.191 L 8.5 2.5 L 31.5 2.5 L 31.5 37.191 z" stroke-linecap="round" />
+  </g>
+  <g transform="matrix(1 0 0 1 0 0)" >
+  <path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: #009bd5; fill-rule: nonzero; opacity: 1;" transform=" translate(-20, -20)" d="M 31 3 L 31 36.382 L 20.447 31.105999999999998 L 20 30.882 L 19.553 31.106 L 9 36.382 L 9 3 L 31 3 M 32 2 L 8 2 L 8 38 L 20 32 L 32 38 L 32 2 L 32 2 z" stroke-linecap="round" />
+  </g>
+  </g>
+</svg>
