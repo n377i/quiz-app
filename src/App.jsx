@@ -5,7 +5,7 @@ import BookmarksPage from "./pages/BookmarksPage";
 import FormPage from "./pages/FormPage";
 import SettingsPage from "./pages/SettingsPage";
 
-function App() {
+const App = () => {
   return (
     <Router>
       <Routes>
@@ -16,6 +16,6 @@ function App() {
       </Routes>
     </Router>
   );
-}
+};
 
 export default App;
