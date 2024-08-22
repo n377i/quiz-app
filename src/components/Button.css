@@ -1,0 +1,13 @@
+.button {
+  display: inline-block;
+  font-family: var(--font-family);
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+  text-decoration: none;
+  background: var(--turquoise-gradient);
+  border: none;
+  border-radius: var(--border-radius_l);
+  padding: 0.8125rem 1.125rem;
+  cursor: pointer;
+}
