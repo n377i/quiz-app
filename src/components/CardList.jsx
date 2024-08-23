@@ -7,6 +7,7 @@ const CardList = ({
   cards,
   showBookmarksOnly,
   onToggleBookmark,
+  onEditCard,
   onDeleteCard,
 }) => {
   // Track index of currently active edit-menu
@@ -44,6 +45,7 @@ const CardList = ({
             <Card
               card={card}
               onToggleBookmark={onToggleBookmark}
+              onEditCard={onEditCard}
               onDeleteCard={onDeleteCard}
               onMenuToggle={() => handleMenuToggle(index)}
               isMenuActive={activeMenu === index}
@@ -51,7 +53,7 @@ const CardList = ({
           </div>
         ))
       ) : (
-        <div className="card" data-js="card-welcome">
+        <div className="card">
           {showBookmarksOnly ? (
             <>
               <h2 className="card__title">No bookmarks yet</h2>
