@@ -1,0 +1,94 @@
+/* Stats */
+
+.card__stats {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  margin: 1.25rem 0 1.75rem;
+}
+
+.card__counter {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background: var(--light-blue);
+  border-radius: var(--border-radius_m);
+  padding: 0.25rem;
+}
+
+.card__counter-icon {
+  width: 1.625rem;
+  height: 2rem;
+}
+
+.card__counter-icon--bookmark {
+  background: url(../assets/icons/icon_bookmark_selected.svg) no-repeat;
+}
+
+.card__counter-icon--questions {
+  background: url(../assets/icons/icon_questions.svg) no-repeat;
+}
+
+.card__counter-number {
+  font-size: 1.25rem;
+  font-weight: 300;
+  text-align: left;
+  color: var(--blue);
+}
+
+/* Dark Mode */
+
+.card__settings {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px dotted var(--light-grey);
+  border-radius: var(--border-radius_m);
+  padding: 0.75rem;
+}
+
+.card__switch {
+  display: inline-block;
+  position: relative;
+  width: 3.625rem;
+  height: 1.875rem;
+}
+
+.card__switch input {
+  display: none;
+}
+
+.card__slider {
+  position: absolute;
+  background: var(--turquoise-gradient);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 30px;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.card__slider:before {
+  position: absolute;
+  background-color: white;
+  content: "";
+  width: 1.5rem;
+  height: 1.5rem;
+  left: 4px;
+  bottom: 3px;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+input:checked + .card__slider {
+  background-color: var(--blue-grey);
+}
+
+input:checked + .card__slider:before {
+  transform: translateX(26px);
+}
