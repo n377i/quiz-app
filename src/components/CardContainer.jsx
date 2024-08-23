@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import CardList from "../components/CardList";
 
 const CardContainer = ({ showBookmarksOnly }) => {
   const [cards, setCards] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const storedCards = JSON.parse(localStorage.getItem("quizCards")) || [];
@@ -21,6 +23,13 @@ const CardContainer = ({ showBookmarksOnly }) => {
     localStorage.setItem("quizCards", JSON.stringify(updatedCards));
   };
 
+  const handleEditCard = (cardToEdit) => {
+    const cardIndex = cards.indexOf(cardToEdit);
+    navigate("/form", {
+      state: { cardToEdit: { ...cardToEdit, index: cardIndex } },
+    });
+  };
+
   const handleDeleteCard = (cardToDelete) => {
     // Filter out card to delete from cards array
     const updatedCards = cards.filter((card) => card !== cardToDelete);
@@ -35,6 +44,7 @@ const CardContainer = ({ showBookmarksOnly }) => {
       showBookmarksOnly={showBookmarksOnly}
       onToggleBookmark={handleToggleBookmark}
       onDeleteCard={handleDeleteCard}
+      onEditCard={handleEditCard}
     />
   );
 };
