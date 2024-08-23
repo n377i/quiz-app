@@ -1,6 +1,6 @@
 import "../components/Header.css";
 
-function Header({ title, isSubPage }) {
+const Header = ({ title, isSubPage }) => {
   return (
     <header className="header">
       <h1
@@ -10,6 +10,6 @@ function Header({ title, isSubPage }) {
       </h1>
     </header>
   );
-}
+};
 
 export default Header;
