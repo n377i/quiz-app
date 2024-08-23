@@ -20,7 +20,6 @@ const navItems = [
 const Navigation = () => {
   // Get location object
   const location = useLocation();
-  console.log(location);
 
   return (
     <nav className="nav">
