@@ -76,7 +76,7 @@ const Card = ({
       <ul className="card__tag-list">
         {tags.map((tag, index) => (
           <li key={index} className="card__tag">
-            {tag}
+            #{tag}
           </li>
         ))}
       </ul>
