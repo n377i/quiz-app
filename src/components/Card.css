@@ -1,0 +1,117 @@
+.card {
+  position: relative;
+  text-align: center;
+  background: var(--white);
+  border-radius: var(--border-radius_l);
+  box-shadow: 0px 3px 12px 0px rgba(74, 80, 69, 0.08);
+  padding: 1.5rem;
+}
+
+.card__title {
+  font-size: 1.125rem;
+  text-align: left;
+}
+
+.card__welcome {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.card__question {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-top: 0.5rem;
+}
+
+.card__button {
+  margin-top: 1.5rem;
+}
+
+.card__answer {
+  color: var(--blue);
+  font-weight: 300;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  margin-top: 1.125rem;
+  background: var(--light-blue);
+  border-radius: var(--border-radius_m);
+  padding: 0.875rem;
+}
+
+/* Tags */
+
+.card__tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.card__tag {
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: var(--blue);
+  background: var(--light-blue);
+  border: 1px solid var(--blue);
+  border-radius: var(--border-radius_s);
+  padding: 0 0.375rem;
+}
+
+/* Bookmark */
+
+.card__bookmark {
+  position: absolute;
+  top: -6px;
+  right: 6px;
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  cursor: pointer;
+}
+
+/* Edit Menu */
+
+.card__edit-menu-button {
+  position: absolute;
+  top: 8px;
+  left: 4px;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 0;
+  cursor: pointer;
+}
+
+.card__edit-menu {
+  position: absolute;
+  top: 9px;
+  left: 28px;
+  padding: 0.25rem 1rem;
+  background: var(--white);
+  border-radius: var(--border-radius_s);
+  box-shadow: 0 3px 8px 0 rgba(74, 80, 69, 0.2);
+  font-size: 0.875rem;
+  text-align: left;
+  line-height: 1.65rem;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.card__edit-menu.closed {
+  transform: translateX(-10px);
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.card__edit-menu:not(.closed) {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+}
+
+.card__edit-menu-item {
+  cursor: pointer;
+}
