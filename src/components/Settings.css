@@ -24,14 +24,6 @@
   height: 2rem;
 }
 
-.card__counter-icon--bookmark {
-  background: url(../assets/icons/icon_bookmark_selected.svg) no-repeat;
-}
-
-.card__counter-icon--questions {
-  background: url(../assets/icons/icon_questions.svg) no-repeat;
-}
-
 .card__counter-number {
   font-size: 1.25rem;
   font-weight: 300;
