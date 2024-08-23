@@ -17,7 +17,7 @@ const navItems = [
   { to: "/settings", label: "Settings", icon: SettingsIcon, alt: "Settings" },
 ];
 
-const Navigation = () => {
+const Navigation = ({ isEditMode }) => {
   // Get location object
   const location = useLocation();
 
@@ -29,8 +29,12 @@ const Navigation = () => {
             <Link
               to={to}
               className={`nav__link ${
-                // If path of current URL equals link path add 'active' class
-                location.pathname === to ? "active" : ""
+                // Add 'active' class if current path matches link path and target is not edit-form
+                isEditMode && to === "/form"
+                  ? ""
+                  : location.pathname === to
+                  ? "active"
+                  : ""
               }`}
             >
               <img src={icon} alt={alt} className="nav__icon" />
