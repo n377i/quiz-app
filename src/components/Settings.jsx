@@ -1,6 +1,11 @@
 import "../components/Card.css";
+import "../components/Settings.css";
 
-const Settings = () => {
+const Settings = ({ darkMode, setDarkMode }) => {
+  const handleToggleTheme = () => {
+    setDarkMode((prevMode) => !prevMode);
+  };
+
   return (
     <div className="card">
       <h2 className="card__title">Stats</h2>
@@ -32,7 +37,12 @@ const Settings = () => {
       <div className="card__settings">
         <h2 className="card__title">Dark Mode</h2>
         <label className="card__switch" htmlFor="theme-toggle">
-          <input type="checkbox" id="theme-toggle" />
+          <input
+            type="checkbox"
+            id="theme-toggle"
+            checked={darkMode}
+            onChange={handleToggleTheme}
+          />
           <div className="card__slider"></div>
         </label>
       </div>
