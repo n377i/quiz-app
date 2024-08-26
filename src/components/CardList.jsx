@@ -59,7 +59,7 @@ const CardList = ({
               <h2 className="card__title">No bookmarks yet</h2>
               <p className="text">
                 To save a quiz card on your bookmarks page, simply click on its
-                bookmark in the top right-hand corner. Repeat this to remove it
+                bookmark in the top right-hand corner. Repeat to remove it
                 again.
               </p>
             </>
@@ -71,7 +71,7 @@ const CardList = ({
                 <br />
                 Start adding a few quiz cards right away.
               </p>
-              <Button to="/form" className="button card__button">
+              <Button to="/form" className="button">
                 Add first quiz card
               </Button>
             </>
