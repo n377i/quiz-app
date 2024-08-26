@@ -26,7 +26,7 @@ const Form = ({ onSubmit, cardToEdit }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    if (!question || !answer || !tags) {
+    if (!question || !answer) {
       showMessage("Please fill in all input fields.", "error");
       return;
     }
@@ -109,7 +109,7 @@ const Form = ({ onSubmit, cardToEdit }) => {
       >
         {message}
       </div>
-      <Button className="button form__button" type="submit">
+      <Button className="button" type="submit">
         Submit
       </Button>
     </form>
