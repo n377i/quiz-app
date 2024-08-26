@@ -17,6 +17,9 @@ const Card = ({
 
   const handleToggleAnswer = () => setShowAnswer((prev) => !prev);
 
+  // Filter out empty tags
+  const validTags = tags.filter((tag) => tag.trim() !== "");
+
   return (
     <div className="card">
       {/* Bookmark */}
@@ -69,17 +72,19 @@ const Card = ({
       {/* Answer */}
       <p className={`card__answer ${showAnswer ? "" : "hidden"}`}>{answer}</p>
       {/* Show/Hide Answer Button */}
-      <Button className="button card__button" onClick={handleToggleAnswer}>
+      <Button className="button" onClick={handleToggleAnswer}>
         {showAnswer ? "Hide Answer" : "Show Answer"}
       </Button>
       {/* Tags */}
-      <ul className="card__tag-list">
-        {tags.map((tag, index) => (
-          <li key={index} className="card__tag">
-            #{tag}
-          </li>
-        ))}
-      </ul>
+      {validTags.length > 0 && (
+        <ul className="card__tag-list">
+          {tags.map((tag, index) => (
+            <li key={index} className="card__tag">
+              #{tag}
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 };
