@@ -35,11 +35,6 @@
   margin-bottom: 1rem;
 }
 
-.form__button {
-  margin-top: 1.375rem;
-  width: 100%;
-}
-
 .form__message {
   border-radius: var(--border-radius_m);
   margin-top: 1rem;
