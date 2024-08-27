@@ -43,30 +43,28 @@ const Card = ({
         onClick={onMenuToggle}
       />
       {/* Edit Menu */}
-      {isMenuActive && (
-        <div className="card__edit-menu">
-          <ul>
-            <li
-              className="card__edit-menu-item"
-              onClick={() => {
-                onEditCard(card);
-                onMenuToggle();
-              }}
-            >
-              Edit
-            </li>
-            <li
-              className="card__edit-menu-item"
-              onClick={() => {
-                onDeleteCard(card);
-                onMenuToggle();
-              }}
-            >
-              Delete
-            </li>
-          </ul>
-        </div>
-      )}
+      <div className={`card__edit-menu ${!isMenuActive ? "closed" : ""}`}>
+        <ul>
+          <li
+            className="card__edit-menu-item"
+            onClick={() => {
+              onEditCard(card);
+              onMenuToggle();
+            }}
+          >
+            Edit
+          </li>
+          <li
+            className="card__edit-menu-item"
+            onClick={() => {
+              onDeleteCard(card);
+              onMenuToggle();
+            }}
+          >
+            Delete
+          </li>
+        </ul>
+      </div>
       {/* Question */}
       <h2 className="card__question">{question}</h2>
       {/* Answer */}
